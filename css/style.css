@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 10px;
+}
+
+p{
+    font-size: 1.6rem;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Nawigacja */
+
+nav{
+    background-color: rgba(178, 199, 57, 0.692);
+
+    height: 50px;
+    line-height: 50px; /* 50 jak w nav, wyśrodkowanie w pionie elementów listy */
+    text-align: center; /* wyśrodkowanie w poziomie*/
+}
+
+nav li{
+    display: inline-block; /* lista będzie w poziomie */
+    padding: 0 25px; /* odstęp między elementami */
+
+}
+
+nav li a{
+    padding: 25px 25px; /* rozszerza "element klikalny" */
+    font-size: 1.6rem;
+    color: white;
+    text-decoration: none;    
+    font-weight: bold;;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    text-shadow: 1px 2px 2px black;
+
+}
+
+nav li a:hover{         /* najechanie */
+    color:wheat;
+}
+
+/* Header */
+
+.header-img{          /* dzieci headera będą pozycjonowane względem header-img */
+    position:relative;
+    height: 250px;
+    background-image: url("../img/pizza.jpg");
+    background-repeat: no-repeat;
+    background-position: 0% 25%; /* stawiamy środek zdjęcia */
+}
+
+.header-text{
+    position:absolute;
+    text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2.5px 3px 3px black;
+
+}
+
+.header-text h1{
+    font-size: 5rem;
+    margin-bottom: 5px;   /* odsunie od siebie teksty */
+}
+
+.header-bg{
+    height: 100%;
+    width: 100%;    /* ma być wysoki i szeroki na 100% rodzica (header)*/
+    background-color: rgba(0, 0, 0, 0.25); /* przyciemnienie tła */
+    background-color: rgb(153, 69, 69, 0.15); /* przyciemnienie tła:
+                                 4 parametr odpowiada za przezroczystość */
+}
+
+/* Main */
+
+main{
+    width: 60%; /* szerokość tekstu */
+    margin: 20px auto; /* auto daje na środek    */
+}
+
+.about-us-heading{
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.about-us-text{
+    padding: 20 px;
+}
+
+section{
+    margin-top: 40px;
+}
+
+.about-us-section{
+    position: relative;
+    margin-bottom: 20px; 
+        /* margin: 200px; ściska obraz i tekst */
+        /* padding: 200px; ściska sam tekst*/
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.top{
+    background-image: url("../img/calzone.jpg");
+    background-position: 30% 10%;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    
+}
+
+.middle{
+    background-image: url("../img/pepperoni.jpg");
+    background-position: 80% 0%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bottom{
+    background-image: url("../img/pączki.jpg");
+    background-position: 42% 10%;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+}
+
+.about-us-text{
+    position: absolute;
+    font-size: 20px;     
+    bottom: 20px;
+    padding: 20px 40px;
+    text-align: center;
+    color:white;
+    text-shadow: 3px 5px 4px black;
+    z-index: 1;
+}
+
+.about-us-bg{
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100%;
+}
+
+.about-us-text h3{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.top .about-us-bg{
+    font-size: 200px;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+}
+
+.bottom .about-us-bg{
+    font-size: 200px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+}
+
+.contact-main{
+    text-align: center;
+    font-size: 3rem;
+    line-height: 50px;
+}
+
+
+
+.menu-ingredients li{
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+.menu-ingredients h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+
+}
+
+.menu-ingredients h3{
+    margin-bottom: 5px;
+    background-color: rgb(233, 220, 195)
+}
+
+#hot{
+    text-shadow: 1px 1.5px 2px rgb(182, 79, 79);
+}
+
+#veg{
+    text-shadow: 1px 1px 1px rgb(79, 182, 88);
+}
+
+#cake{
+    text-shadow: 1px 1px 1px brown);
+}
+
+/* Footer */
+
+footer{
+    height: 50px;
+    line-height: 50px; /* wyrównanie w pionie */
+    background-color: rgba(178, 199, 57, 0.692);
+    color: white;
+    text-align: center;    
+    text-shadow: 1px 2px 2px black;
+}
+
+.foot-icon {         /* odległość między napisem a ikonkami */
+    margin-left: 25px;
+}
+
+.foot-icon i{         /* odległość między ikonkami */
+    margin-left: 5px;
+    color: white;
+    font-size: 20px;
+}
+
+footer span :hover{
+    transition: color 0.3s;
+    color:wheat;
+    padding: 0 50 px;
+}
